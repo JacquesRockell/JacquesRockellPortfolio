@@ -1,0 +1,31 @@
+@use "../abstracts/colors" as c;
+
+$fontScale: calc(100vw / 7);
+
+#info-section-id {
+    position: relative;
+    overflow: hidden;
+
+    .paralax-header {
+        width: 85vw;
+        text-align: center;
+        color: c.$dark-grey;
+        opacity: 1;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        font-size: $fontScale;
+        font-weight: 900;
+        font-weight: bold;
+        isolation: isolate;
+        z-index: -1;
+
+        text-shadow: 
+            -0.02em -0.02em .07em rgba(255, 255, 255, 0.05),
+            0.02em 0.02em .07em rgba(0, 0, 0, .8);
+
+        transition: transform 0.5s ease-out 0s;
+    }
+}
+

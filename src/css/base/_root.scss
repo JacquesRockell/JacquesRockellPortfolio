@@ -1,0 +1,9 @@
+@use "../abstracts/colors" as c;
+
+body {
+    background-color: c.$dark-grey;
+    ::selection {
+        color: c.$black;
+        background: c.$gold;
+    }
+}

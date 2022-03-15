@@ -1,0 +1,119 @@
+@use "../abstracts/colors" as c;
+
+.name-container {
+    width: 40rem;
+    transform: translateY(calc(50vh - 50%)) translateX(calc(50vw - 50%));
+    transition: all 1s ease;
+    transform-origin: top left;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 999px) {
+    .name-container {
+        width: 30rem;
+    }   
+}
+
+@media screen and (max-width: 639px) {
+    .name-container {
+        width: 20rem;
+    }   
+}
+
+.name-scroll {
+    transition-delay: 1s;
+    transform: scale(.5) translateY(0) translateX(0);
+    margin: 2rem;
+}
+
+#NameContainer {
+    path {
+        fill: c.$gold;
+    }
+}  
+
+.loadName {
+    #FJ { --order: 0 }
+    #FA { --order: 1 }
+    #FC { --order: 2 }
+    #FQ { --order: 3 }
+    #FU { --order: 4 }
+    #FE { --order: 5 }
+    #FS { --order: 6 }
+    #LR { --order: 7 }
+    #LO { --order: 8 }
+    #LC { --order: 9 }
+    #LK { --order: 10 }
+    #LE { --order: 11 }
+    #LL1 { --order: 12 }
+    #LL2 { --order: 13 }
+
+    path { 
+        opacity: 0;
+        animation: loadLetters 1s ease forwards;
+        animation-delay: calc(var(--order) * 100ms);  
+    }
+    
+    @keyframes loadLetters {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.unloadName { 
+    #FA { --order2: 5 }
+    #FC { --order2: 4 }
+    #FQ { --order2: 3 }
+    #FU { --order2: 2 }
+    #FE { --order2: 1 }
+    #FS { --order2: 0 }
+    
+    #LO { --order2: 5 }
+    #LC { --order2: 4 }
+    #LK { --order2: 3 }
+    #LE { --order2: 2 }
+    #LL1 { --order2: 1 }
+    #LL2 { --order2: 0 }
+
+    path {
+        animation: unloadLetters .5s linear forwards;
+        animation-delay: calc(var(--order2) * 100ms);
+    }
+
+    #FJ, #LR {
+        opacity: 1 !important;
+        animation: none;
+    }
+
+    @keyframes unloadLetters {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+.scroll-reminder {
+    position: fixed;
+    bottom: 0;
+    margin-left: 50%; 
+    opacity: 0;   
+    margin-bottom: 1rem;
+    color: c.$gold;
+
+    transform: translateX(-50%);
+    transition: all .5s ease-out;
+}
+
+.active {
+    opacity: 1;
+}
+

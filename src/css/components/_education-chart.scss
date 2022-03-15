@@ -1,0 +1,39 @@
+@use "../abstracts/colors" as c;
+
+.ed-chart-container {
+    min-height: 10rem;
+    margin: 0 !important;
+    .timeline-container {
+        p {
+            transform: translateY(50%);
+            &:first-of-type {
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .bar {
+        position: relative;
+        width: 2px;
+        background-color: c.$silver;
+        
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            left: -4px;
+            top: -5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: c.$silver;
+        }     
+        &::after {
+            top: auto;
+            bottom: -4px;
+        }
+    }
+    p {
+        word-wrap: normal;
+        float: right;
+    }
+}

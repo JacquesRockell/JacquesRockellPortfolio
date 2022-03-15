@@ -1,0 +1,37 @@
+@use "../abstracts/colors" as c;
+
+$small: 639px;
+$medium: 900px;
+
+body {
+    letter-spacing: .08em;
+    word-spacing: .15em;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 3em !important;
+    color: c.$silver;
+    line-height: normal;
+}
+
+h4 {
+    font-size: 3em !important;
+    color: c.$gold;
+}
+
+p {
+    font-size: 2rem;
+    @media screen and (max-width: $small) {
+        font-size: 1.5rem;
+    }
+    font-weight: 300 !important;
+    letter-spacing: .08em;
+    word-spacing: .15em;
+    color: c.$silver;
+} 
+    

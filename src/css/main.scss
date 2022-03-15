@@ -1,0 +1,16 @@
+@use "./base/reset";
+@use "./base/root";
+@use "./components/name";
+@use "./components/social";
+@use "./components/page-counter";
+@use "./components/info-section";
+@use "./components/education-chart";
+@use "./base/typography";
+@use "./base/font-face";
+@use "./layouts/projects";
+@use "./layouts/contact";
+@use "./layouts/landing";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,0 +1,175 @@
+@use "../abstracts/colors" as c;
+
+.projects-container {
+    .project {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 5rem;
+        margin-right: 5rem;
+        .sticky-box {
+            position: sticky;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 100vh;
+            top: 0;
+            .card {
+                position: relative;
+                //background-color: c.$extra-dark-grey;
+                width: 28rem;
+                height: 35rem;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                border-radius: .3rem;
+                //box-shadow: 0 0 2rem .5rem rgba(0, 0, 0, 0.5);
+                box-shadow:
+                    rgba(255, 255, 255, 0.04) -.4rem -.4rem .8rem,
+                    rgb(0, 0, 0, .4) .4rem .4rem .8rem;
+                & > p {
+                    margin-top: 1em;
+                    font-size: 1.45rem;
+                }
+                .tags{
+                    margin-top: auto;
+                    display: flex;
+                    flex-direction: row;
+                    gap: .5rem;
+                    .tag{
+                        background-color: c.$gold;
+                        padding: .2em .6em;
+                        p {
+                            color: c.$black;
+                            font-size: 1em;
+                        }
+                    }
+                }
+                // &::after {
+                //     content: "";
+                //     position: absolute;
+                //     width: 100%;
+                //     height: 100%;
+                //     top: 1rem;
+                //     left: 1rem;
+                //     z-index: -1;
+                //     border: 1px solid c.$gold;
+                // }
+            }
+        }
+        .images-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10rem;
+            position: relative;
+            .project-img {
+                max-height: 25rem;
+                transform: translateY(-50%);
+                box-shadow: 0 0 2rem .5rem rgba(0, 0, 0, 0.5);
+                &:first-child {
+                    margin-top: 50vh;  
+                }
+                &:last-child {
+                    margin-bottom: 50vh;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1250px) {
+        .project {
+            justify-content: space-between;
+            gap: 2rem;
+            .sticky-box {
+                flex-direction: column;
+                justify-content: center;
+                .card {
+                    width: 24rem;
+                    height: 32rem;
+                    padding: 1.5rem;
+                    & > p {
+                        font-size: 1.3rem;
+                    }
+                    .tags{
+                        .tag{
+                            p {
+                                font-size: .9rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 999px) {
+        .project {
+            flex-direction: column;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            .sticky-box {
+                .card {
+                    width: 24rem;
+                    height: 32rem;
+                    padding: 1.5rem;
+                    & > p {
+                        font-size: 1.3rem;
+                    }
+                    .tags{
+                        .tag{
+                            p {
+                                font-size: .9rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .images-container {
+                display: flex;
+                flex-direction: column;
+                gap: 10rem;
+                position: relative;
+                .project-img {
+                    max-height: 25rem;
+                    transform: translateY(-50%);
+                    box-shadow: 0 0 2rem .5rem rgba(0, 0, 0, 0.5);
+                    &:first-child {
+                        margin-top: 10rem;  
+                    }
+                    &:last-child {
+                        margin-bottom: 100vh;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 639px) {
+            .project {
+                flex-direction: column;
+                margin: 0;
+                .sticky-box {
+                    .card {
+                        margin: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: auto;
+                        padding: 3rem;
+                        h2 {
+                            text-align: center;
+                        }
+                        & > p {
+                            text-align: center;
+                        }
+                        .tags {
+                            margin-top: 2rem;
+                        }
+                    }
+                }
+                .images-container {
+                    margin-left: 3rem;
+                    margin-right: 3rem;
+                    gap: 5rem;
+                }
+            }
+        }
+    }
+}
