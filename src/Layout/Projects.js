@@ -29,7 +29,6 @@ const Projects = () => {
             centerOffeset > 0 ? scale -= centerOffeset : scale = centerOffeset
             scale = scale / 8000
             if(scale > -.2){
-                console.log(scale)
                 el.style.transform = `scale(${ 1 + scale})`;
             }
             

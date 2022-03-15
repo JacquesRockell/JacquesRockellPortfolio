@@ -113,8 +113,9 @@
                     & > p {
                         font-size: 1.3rem;
                     }
-                    .tags{
-                        .tag{
+                    .tags {
+                        .tag {
+                            padding: .2em .5em;
                             p {
                                 font-size: .9rem;
                             }
@@ -161,6 +162,13 @@
                         }
                         .tags {
                             margin-top: 2rem;
+                            margin-left: 2rem;
+                            margin-right: 2rem;
+                            .tag {
+                                p {
+                                    font-size: .8rem;
+                                }
+                            }
                         }
                     }
                 }

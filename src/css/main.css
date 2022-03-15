@@ -574,6 +574,9 @@ h4, h2 {
   .projects-container .project .sticky-box .card > p {
     font-size: 1.3rem;
   }
+  .projects-container .project .sticky-box .card .tags .tag {
+    padding: 0.2em 0.5em;
+  }
   .projects-container .project .sticky-box .card .tags .tag p {
     font-size: 0.9rem;
   }
@@ -617,6 +620,11 @@ h4, h2 {
   }
   .projects-container .project .sticky-box .card .tags {
     margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .projects-container .project .sticky-box .card .tags .tag p {
+    font-size: 0.8rem;
   }
   .projects-container .project .images-container {
     margin-left: 3rem;
@@ -751,7 +759,19 @@ h4, h2 {
 }
 @media screen and (max-width: 639px) {
   .contact-container .contact-form-container {
-    width: 80vw;
+    width: 100%;
+  }
+  .contact-container .contact-form-container form {
+    padding: 4rem;
+  }
+  .contact-container .contact-form-container form h2 {
+    text-align: center;
+  }
+  .contact-container .contact-form-container form input, .contact-container .contact-form-container form textarea {
+    font-size: 1rem;
+  }
+  .contact-container .contact-form-container form button p {
+    font-size: 1rem;
   }
 
   .alert {

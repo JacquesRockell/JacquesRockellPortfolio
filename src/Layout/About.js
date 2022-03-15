@@ -1,5 +1,4 @@
 import * as React from "react"
-import { useEffect } from "react"
 import InfoSection from "../components/InfoSection"
 
 // markup
