@@ -1,10 +1,9 @@
 module.exports = {
   siteMetadata: {
       title: `Jacques Rockell`,
-      siteUrl: `https://www.jacquesrockell.com`
+    siteUrl: `https://www.yourdomain.tld`
   },
   plugins: [
-    "gatsby-plugin-sitemap",
     "gatsby-plugin-image", 
     "gatsby-plugin-postcss", 
     {
